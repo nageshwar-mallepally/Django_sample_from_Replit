@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from . import views
 from todo.views import todoView, addTodo, deleteTodo, coverImage
+from student.views import students_view, addStudent, deleteStudent
 
 urlpatterns = [
     path('admin/', admin.site.urls),    
@@ -24,5 +25,8 @@ urlpatterns = [
     path('addTodo/', addTodo),
     path('deleteTodo/<int:todo_id>/', deleteTodo),
     path('app.png', coverImage),
-    path('', views.index, name='index')
+    path('', views.index, name='index'),
+    path('students/all', students_view),
+    path('addStudent/', addStudent),
+    path('deleteStudent/<int:s_id>/', deleteStudent)
 ]
