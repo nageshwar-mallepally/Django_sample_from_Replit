@@ -1,5 +1,10 @@
 # Default ignored files
 
-#.idea
-#*.initial.py
-#*.iml
+.idea
+*.initial.py
+*.iml
+__pycache__
+*.sqlite3
+.replit
+*/migrations
+.git
