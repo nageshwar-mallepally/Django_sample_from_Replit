@@ -5,7 +5,6 @@ from .models import Student
 
 # Create your views here.
 def students_view(request):
-  global first_time
   all_students = Student.objects.all()
   return render(request, 'index.html', 
   {'all_items': all_students})

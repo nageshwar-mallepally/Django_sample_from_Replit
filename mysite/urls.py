@@ -18,6 +18,7 @@ from django.urls import path
 from . import views
 from todo.views import todoView, addTodo, deleteTodo, coverImage
 from student.views import students_view, addStudent, deleteStudent
+from course.views import course_view, addCourse, deleteCourse
 
 urlpatterns = [
     path('admin/', admin.site.urls),    
@@ -28,5 +29,8 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('students/all', students_view),
     path('addStudent/', addStudent),
-    path('deleteStudent/<int:s_id>/', deleteStudent)
+    path('deleteStudent/<int:s_id>/', deleteStudent),
+    path('course/all', course_view),
+    path('addCourse/', addCourse),
+    path('deleteCourse/<int:s_id>/', deleteCourse)
 ]
